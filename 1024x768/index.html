@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=300,height=250">
+    <title>Lancome_1024x768</title>
+    <script src="zepto.min.js" defer></script>
+    <script src="path.js" defer></script>
+    <script src="freehand.js" defer></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 664px;
+            height: 664px;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            position: relative;
+            background: #0f172f;
+            overflow: hidden;
+        }
+        #container img {
+            position: absolute;
+        }
+        #frame01 {
+            width: 1024px;
+            height: 768px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #light, #light_2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        #logo {
+            left: 147px;
+            top: 8px; 
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1); 
+        }
+        #logo_2 {
+            left:95px;
+            top: 13px;
+            opacity: 0; 
+        }
+        #bg_1 {
+            top: 0;
+            left: 0;
+            opacity: 1;
+        }
+        #bg_2 {
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        #loveyou {
+            top: 0;
+            left: 0;
+            opacity: 1;
+        }
+       #loveyou_2 {
+            top: 0;
+            left: 0; 
+            opacity: 0;
+        }
+        #shadow {
+            top: 0px;
+            right: -4px;
+            opacity: 0;
+            transform-origin: 50% 50%;
+            -webkit-transform-origin: 50% 50%;
+        }
+        #shadow_2 {
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 0;
+        }
+        #text_1 {
+            top: 0;
+            left: 0;
+            opacity: 1;
+        }
+       #text_2 {
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        #w_cta_1 {
+            bottom: 14px;
+            left: 81px;
+            overflow: hidden;
+            position: absolute;
+            width: 135px;
+            height: 23px; 
+            opacity: 1;
+        }
+        #cta_1_shadow {
+            bottom: 2px;
+            left: 73px;
+            overflow: hidden;
+            position: absolute;
+            width: 153px;
+            height: 43px;
+            opacity: 0;
+        }
+        #glow_1 {
+            position: absolute;
+            transform: translateX(-500%);
+            -webkit-transform: translateX(-500%);
+            left: 150px;
+            top: -20px;
+        }
+        #w_cta_2 {
+            bottom: 12px;
+            left: 81px;
+            overflow: hidden;
+            position: absolute;
+            width: 135px;
+            height: 23px; 
+            opacity: 0;
+        }
+        #cta_2_shadow {
+            bottom: 0px;
+            left: 93px;
+            overflow: hidden;
+            position: absolute;
+            width: 117px;
+            height: 39px;
+            opacity: 0;
+        }
+        #glow_2 {
+            position: absolute;
+            transform: translateX(-500%);
+            -webkit-transform: translateX(-500%);
+            left: 100px;
+            top: -20px;
+        }
+        #product {
+            top: 9px;
+            right: 10px;
+            transform: translateX(150%);
+            -webkit-transform: translateX(150%);
+            /*opacity: 0;*/
+        }
+        #handwriting {
+            left: 0;
+            top: 0;
+            position: absolute;
+
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1); 
+        }
+        
+        #shadow_2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        #frame02 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    </style>
+    <script type="text/javascript" src="http://ds.serving-sys.com/BurstingScript/EBLoader.js"></script>
+    <!-- load function -->
+    <script type="text/javascript">
+        ! function(n) { n.preloadImages = function(n, o) { window.IMAGES_CACHE = {};
+        var e, t, i = n.length;
+        if (0 === n.length) return void(o && "function" == typeof o && o());
+        for (; e = n.pop();) t = new Image, t.onload = function(n) { console.log("Loading image: ", n), window.IMAGES_CACHE[n] = this, i--, 0 === i && (console.log("All images are ready..."), o && "function" == typeof o && o()) }.bind(t, e), t.src = e }, n.loadScripts = function(n, o) {
+        var e, t, i = n.length;
+        if (0 === n.length) return void(o && "function" == typeof o && o());
+        for (; e = n.pop();) t = document.createElement("script"), t.defer = !0, t.onload = function() { i--, 0 === i && (console.log("All scripts are ready..."), o && "function" == typeof o && o()) }, t.src = e, document.getElementsByTagName("head")[0].appendChild(t) } }(window);
+    </script>
+    <!-- start ad -->
+    <script type="text/javascript">
+        window.onload = function() {
+            startAd();
+        }
+        function startAd() {
+            loadScripts([
+                'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TimelineLite.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js'
+            ], loadAssets);
+        }
+
+        function loadAssets() {
+            preloadImages([
+                'bg_1.jpg',
+                'bg_2.jpg',
+                'cta_1.png',
+                'loveyou.png',
+                'glow.png',
+                'product.png',
+                'shadow.png',
+                'text_1.png',
+                'text_2.png'
+            ], timelines);
+        }
+        
+        function timelines() {  
+            var glyph, data, context;
+            glyph = window.IMAGES_CACHE['loveyou.png'];
+            data = [
+            // L
+            [37, 337, 10],
+            [44, 330, 10],
+            [60, 315, 12],//3
+            [74, 301, 13],
+
+            [85, 290, 14],
+            [97, 275, 15],//3
+            [104, 263, 17],
+            [110, 252, 19],
+
+            [116, 238, 21],//3
+            [120, 224, 23],
+            [125, 214, 24],
+            [130, 200, 24],//4
+
+            [140, 170, 24],
+            [145, 138, 24],
+            [150, 104, 24],//3
+            [145, 90, 30],
+
+            [130, 99, 30],
+            [120, 110, 30],//3
+            [107, 140, 30],
+            [99, 158, 30],
+
+            [92, 184, 30],//3
+            [82, 225, 30],
+            [77, 270, 30],
+            [78, 312, 30],//3
+
+            [87, 330, 30],
+            [118, 316, 30],
+            [135, 300, 30],//3
+            [145, 284, 30],
+
+            [156, 305, 30],
+            [175, 295, 30],//3
+            [185, 280, 15],
+            [203, 230, 15],
+
+            [193, 203, 25],//3
+            [175, 235, 30],
+            [160, 240, 30],
+            [150, 268, 30],//3 
+
+
+            [203, 170, 50],
+            [203, 220, 35],
+            [203, 270, 55],
+            [235, 170, 50],
+
+            [235, 170, 50],
+
+    
+            [256, 250, 30],
+            [284, 240, 10],
+            [290, 235, 10],
+            [284, 240, 10],
+            [271, 254, 50],
+            [260, 170, 100],
+            // [235, 170, 100],
+            // [235, 170, 100],
+            // [225, 280, 30],
+            // null,null,
+            // //het 0
+
+            // [218, 203, 20],
+            // [218, 223, 20]
+            //[0, 0, 0],
+            //[218, 203, 20]
+            //[215, 293, 30],*///5*/
+            //null,
+            //null,
+             
+            /**/
+            
+            ];
+            context = document.querySelector('#handwriting').getContext('2d', { alpha: true });
+
+            var handwriting = new Freehand(); // TODO: new Freehand(context, glyph, data);
+            handwriting.init(context, glyph, data);  
+            
+            //Start animation 
+            var masterTimeline = new TimelineLite(); 
+            masterTimeline.add(TweenLite.to(handwriting, 1, { play: [] }), 0);
+
+            //Frame 01 
+            /*delay= 1;
+            masterTimeline.add(TweenLite.to('#glow_1', 1, { x: 0,ease: Power0.easeOut }), delay); 
+
+            delay+= 2;
+            masterTimeline.add(TweenLite.to('#frame01', 1, { autoAlpha: 0, ease: Power1.easeOut }), delay);
+            masterTimeline.add(TweenLite.to('#frame02', 1, { autoAlpha: 1, ease: Power1.easeOut }), delay);
+            masterTimeline.add(TweenLite.to('#w_cta_2', 1, { autoAlpha: 1,ease: Power0.easeOut }), delay); 
+            masterTimeline.add(TweenLite.to(handwriting, 1, { play: [] }), delay);
+
+            delay+= 2;
+            masterTimeline.add(TweenLite.to('#glow_2', 1, { x: 0,ease: Power0.easeOut }), delay);*/
+            
+        }
+    </script> 
+</head>
+<body>
+    <div id="container">
+        <!--<img src="bg_2.jpg" id="bg_2" alt="">
+        <div id="frame01">
+            <img src="bg_1.jpg" id="bg_1" alt=""> 
+            <img src="loveyou.png" id="loveyou" alt=""> 
+            <img src="light.png" id="light" alt=""> 
+            <img src="text_1.png" id="text_1" alt="">
+            <div id="w_cta_1">
+                <img src="cta_1.png" id="cta_1" alt=""> 
+                <img src="glow.png" id="glow_1" alt="">
+            </div>
+            <img src="logo.png" id="logo" alt=""> 
+        </div> 
+        <img src="frame02.jpg" id="frame02" alt="">
+        <div id="w_cta_2">
+            <img src="cta_1.png" id="cta_2" alt=""> 
+            <img src="glow.png" id="glow_2" alt="">
+        </div>-->
+        <canvas id="handwriting" width="664" height="664"></canvas>
+    </div>
+</body>
+</html>
